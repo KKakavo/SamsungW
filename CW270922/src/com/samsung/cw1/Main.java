@@ -1,7 +1,14 @@
 package com.samsung.cw1;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
-        System.out.println("Hi");
+        Scanner scanner = new Scanner(System.in);
+        int a,b;
+        a = scanner.nextInt();
+        b = scanner.nextInt();
+        int sum = a + b;
+        System.out.println(sum);
     }
 }
