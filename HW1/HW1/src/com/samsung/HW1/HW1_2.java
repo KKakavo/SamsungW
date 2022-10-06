@@ -1,4 +1,4 @@
-package com.samsung;
+package com.samsung.HW1;
 
 import java.util.Scanner;
 public class HW1_2
