@@ -17,6 +17,7 @@ public class Pet {
     public void addVisit(String visit){
         visits[index++]=visit;
         if(index == visits.length()){
+            visits.length*=2;
             String[] temp = new String[visits.length];
             String visits = new String[visits.length+10];
             for (int i = 0; i < temp.length; i++) {
