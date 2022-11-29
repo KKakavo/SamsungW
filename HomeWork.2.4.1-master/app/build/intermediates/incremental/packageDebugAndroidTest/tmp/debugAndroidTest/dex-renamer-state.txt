@@ -1,0 +1,7 @@
+#Fri Nov 18 22:35:04 MSK 2022
+base.1=C\:\\Users\\Misha\\Documents\\GitHub\\SamsungW\\HomeWork.2.4.1-master\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\7\\classes.dex
+path.1=7/classes.dex
+base.0=C\:\\Users\\Misha\\Documents\\GitHub\\SamsungW\\HomeWork.2.4.1-master\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=0/classes.dex

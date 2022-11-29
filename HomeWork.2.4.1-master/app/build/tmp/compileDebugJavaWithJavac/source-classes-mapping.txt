@@ -1,0 +1,4 @@
+ru/samsung/itschool/book/BuildConfig.java
+ ru.samsung.itschool.book.BuildConfig
+ru/samsung/itschool/book/MainActivity.java
+ ru.samsung.itschool.book.MainActivity
