@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SR271222</string>
+    <string name="ProductName">Название продукта</string>
+    <string name="ProductDate">Дата поступления</string>
+    <string name="ProductCount">Количество</string>
+    <string name="ProductCost">Стоимость за единицу</string>
+    <string name="ProductAdd">Добавить продукт</string>
+    <string name="ProductFind">Поиск продукта</string>
+    <string name="getProduct">Найти продукт</string>
+</resources>
