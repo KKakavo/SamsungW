@@ -1,7 +1,9 @@
 package com.example.cclasswork020323;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
+import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -24,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Student> studentList;
     StudentAdapter studentAdapter;
+
+    private ItemTouchHelper.SimpleCallback simpleItemTouchCallback;
 
     private AppCompatButton btnAdd;
     @Override
@@ -57,5 +61,33 @@ public class MainActivity extends AppCompatActivity {
                 studentAdapter.notifyItemInserted(studentList.size());
             }
         });
+
+        simpleItemTouchCallback = new ItemTouchHelper.SimpleCallback(
+                0,
+                ItemTouchHelper.LEFT
+        ) {
+            @Override
+            public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+                return false;
+            }
+
+            @Override
+            public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+
+                int index = viewHolder.getAdapterPosition();
+                Student student = studentList.get(index);
+
+                studentDao.deleteById(student.getId());
+
+                studentList.remove(index);
+
+                studentAdapter.notifyItemRemoved(index);
+
+            }
+        };
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleItemTouchCallback);
+        itemTouchHelper.attachToRecyclerView(rvStudent);
+
     }
 }

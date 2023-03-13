@@ -155,7 +155,7 @@ public class StudentDaoImpl implements StudentDao{
     }
 
     @Override
-    public int deleteById(int id) {
+    public int deleteById(long id) {
 
         SQLiteDatabase sqLiteDatabase = openHelper.getWritableDatabase();
 
